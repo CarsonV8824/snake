@@ -242,7 +242,7 @@ unsigned short Game()
             break;
         }
 
-        scoreNum = (lenSnake - 1) / 9;
+        scoreNum = (lenSnake - 1) / (squareSide / SnakeVelocity);
         std::string text = "Score: ";
         text += std::to_string(scoreNum);
         DrawText(text.c_str(), 0, 0, 24, WHITE);
